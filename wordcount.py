@@ -9,10 +9,12 @@ def count_words(my_file):
             line = line.rstrip()
             words = line.split(' ')  # split each word by a space
             text.extend(words)
-        return text
         # initialize empty dictionary
+    word_count = {}
     # loop over list
+    for word in text:
         # use dictionary.get('word',0) + 1 to track count of words
+        word_count[word] = word_count.get(word, 0) + 1
     # print key, values
         # use .items()
 print count_words('test.txt')
